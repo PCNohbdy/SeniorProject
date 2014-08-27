@@ -7,6 +7,8 @@ public class Shoot : MonoBehaviour {
 	public Rigidbody prefabBullet;
 	public float bulletSpeed;
 	public Vector3 vec;
+	public AudioSource m ;
+	public AudioClip audio ;
 	// Use this for initialization
 	void Start () {
 
@@ -18,7 +20,7 @@ public class Shoot : MonoBehaviour {
 	void Update () {
 	
 		if (Input.GetButtonDown ("Fire1")) {
-
+			m.PlayOneShot(audio) ;
 			vec = transform.position + transform.forward * 2 ;
 			vec.y += 1;
 
