@@ -22,7 +22,7 @@ public class Shoot : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 			m.PlayOneShot(audio) ;
 			vec = transform.position + transform.forward * 2 ;
-			vec.y += 1;
+			vec.y = 4 ;
 
 			Rigidbody bulletInstance = Instantiate(prefabBullet, vec , transform.rotation) as Rigidbody;
 
