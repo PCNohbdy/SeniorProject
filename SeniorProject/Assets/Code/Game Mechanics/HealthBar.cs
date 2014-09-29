@@ -13,8 +13,10 @@ public class HealthBar : MonoBehaviour {
 	void TakeDamage(int damage)
 	{
 		CurrentHealth -= damage;
-		if (Health < 0)
-				Health = 0;
+		if (CurrentHealth < 0) {
+						CurrentHealth = 0;
+						Destroy (gameObject);
+				}
 	}
 	
 	// Update is called once per frame
