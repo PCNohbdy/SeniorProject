@@ -8,7 +8,7 @@ public class HoverBotAi : MonoBehaviour {
 	Vector3 NoYRotationVec;
 	Vector3 Vec ;
 	State state ;
-	float previousTime ;
+	float previousTime = 0;
 	// Use this for initialization
 
 
