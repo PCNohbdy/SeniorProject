@@ -4,23 +4,17 @@ using System.Collections;
 public class Rocket : MonoBehaviour {
 	public ParticleSystem sys ;
 	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		if (transform.position.y < 0)
 			Destroy (gameObject);
 	}
-
+	
 	void OnTriggerEnter(Collider other)
 	{
-		Instantiate (sys, transform.position, Quaternion.identity);
-		if (other.tag == "Player") {
-			other.BroadcastMessage ("TakeDamage", 10);
+		if (other.tag == "Enemy") {
+			other.BroadcastMessage ("TakeDamage", 5);
 		}
-
+		Instantiate (sys,transform.position, Quaternion.identity);
 		Destroy (gameObject);
 	}
 }

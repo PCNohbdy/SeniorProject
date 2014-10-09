@@ -2,13 +2,13 @@
 using System.Collections;
 
 public class HoverBotAi : MonoBehaviour {
-	enum State {attack, run, dodge, shoot} ;
-	public Transform playerPosition ;
+	public enum State {attack, run, dodge, shoot} ;
+	public Vector3 PlayerPosition ;
 	public Rigidbody bullet ;
 	Vector3 NoYRotationVec;
 	Vector3 Vec ;
 	State state ;
-	float previousTime = 0;
+
 	// Use this for initialization
 
 
@@ -19,7 +19,11 @@ public class HoverBotAi : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (GameObject.FindWithTag ("Player").GetComponent<HealthBar> ().dead)
+						return;
 
+		PlayerPosition = GameObject.FindWithTag ("Player").transform.position;
+		PlayerPosition.y = 0;
 		if (state == State.attack) {
 						Attack ();
 		
@@ -37,15 +41,15 @@ public class HoverBotAi : MonoBehaviour {
 
 	void Attack()
 	{
-		NoYRotationVec = playerPosition.position;
+		NoYRotationVec = PlayerPosition;
 		NoYRotationVec.y = transform.position.y;
 		transform.LookAt (NoYRotationVec);
 		transform.position = transform.position + transform.forward * Time.deltaTime * 3;
 
-		if (Vector3.Distance (transform.position, playerPosition.position) < 20) {
+		if (Vector3.Distance (transform.position, PlayerPosition) < 20) {
 						
 			state = State.shoot;
-			previousTime = Time.time ;
+
 				}
 	}
 
@@ -62,7 +66,7 @@ public class HoverBotAi : MonoBehaviour {
 
 	void AiShoot()
 	{
-		NoYRotationVec = playerPosition.position;
+		NoYRotationVec = PlayerPosition;
 		NoYRotationVec.y = transform.position.y;
 		transform.LookAt (NoYRotationVec);
 
@@ -77,7 +81,7 @@ public class HoverBotAi : MonoBehaviour {
 
 
 
-		if (Vector3.Distance (transform.position, playerPosition.position) > 20) 
+		if (Vector3.Distance (transform.position, PlayerPosition) > 20) 
 			state = State.attack;
 
 	}

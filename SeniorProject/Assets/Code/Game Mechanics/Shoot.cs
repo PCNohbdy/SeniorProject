@@ -18,12 +18,15 @@ public class Shoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+		if (GetComponent<HealthBar> ().dead)
+						return;
+
 		if (Input.GetButtonDown ("Fire1")) {
             EventAggregatorManager.Publish(new PlaySoundMessage(m_AudioSound, false));
-			vec = transform.position + transform.forward * 3;
+			vec = transform.position + transform.forward * 4;
 		
 			vec.y = transform.position.y ;
-			Rigidbody bulletInstance = Instantiate(prefabBullet, vec , Quaternion.identity) as Rigidbody;
+			Rigidbody bulletInstance = Instantiate(prefabBullet, vec , prefabBullet.transform.rotation) as Rigidbody;
 
 			bulletInstance.AddForce(transform.forward * bulletSpeed);
 	
