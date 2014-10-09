@@ -90,7 +90,7 @@ public class GenericObject : MonoBehaviour {
 						if (PlayerPosition.x < 104.0f) {
 								this.transform.position = RespawnPointOne;
 						} else
-								this.transform.position = RespawnPointOne;
+								this.transform.position = RespawnPointTwo;
 
 
 				this.GetComponent<HealthBar> ().SendMessage ("Alive");
@@ -104,7 +104,7 @@ public class GenericObject : MonoBehaviour {
 		if (PlayerPosition.x < 104.0f) {
 			GameObject.FindWithTag ("Player").transform.position = RespawnPointOne;
 		} else
-			GameObject.FindWithTag ("Player").transform.position = RespawnPointOne;
+			GameObject.FindWithTag ("Player").transform.position = RespawnPointTwo;
 	}
 
 

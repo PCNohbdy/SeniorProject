@@ -23,9 +23,10 @@ public class Shoot : MonoBehaviour {
 
 		if (Input.GetButtonDown ("Fire1")) {
             EventAggregatorManager.Publish(new PlaySoundMessage(m_AudioSound, false));
-			vec = transform.position + transform.forward * 4;
+
+			vec = transform.position + transform.forward * 5;
 		
-			vec.y = transform.position.y ;
+			vec.y = 4.0f;
 			Rigidbody bulletInstance = Instantiate(prefabBullet, vec , prefabBullet.transform.rotation) as Rigidbody;
 
 			bulletInstance.AddForce(transform.forward * bulletSpeed);
