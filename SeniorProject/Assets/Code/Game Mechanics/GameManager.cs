@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 	public bool HealthSpawned ;
 	public bool ArmorSpawned ;
 	public GameObject HealthPrefab; 
+	public Rect PlayerScoreDisplay ;
+	public Rect EnemyScoreDisplay;
 
 	public float SpawnRate ;
 	private Vector3 HealthPosition ;
@@ -24,6 +26,13 @@ public class GameManager : MonoBehaviour {
 		SpawnRate = 60.0f;
 		HealthPosition.Set (107.0f, 2.0f, 142.0f);
 		ArmorPosition.Set (107.0f, 4.0f, 55.0f);
+		PlayerScoreDisplay.Set (Screen.width * 6 / 7, Screen.height * 7 / 10, Screen.width / 7, Screen.height / 18); 
+		                        }
+
+	void OnGUI()
+	{
+
+		GUI.Box (PlayerScoreDisplay, "Your Score: " + PlayerScore);
 
 	}
 	
@@ -45,7 +54,7 @@ public class GameManager : MonoBehaviour {
 
 
 		if (PlayerScore >= 10) {
-
+			Application.LoadLevel ("WinScene") ;
 				}
 		if (AIScore >= 10) {
 

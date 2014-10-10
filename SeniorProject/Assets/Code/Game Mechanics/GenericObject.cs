@@ -19,7 +19,7 @@ public class GenericObject : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 				
-		RespawnPointOne.Set (152.0f, 4.0f, 91.0f);
+		RespawnPointOne.Set (152.0f, 7.0f, 91.0f);
 		RespawnPointTwo.Set (55.0f, 7.0f, 96.0f);
 		HandlePlayer = false;
 		DeathBox.width = Screen.width;

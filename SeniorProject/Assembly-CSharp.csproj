@@ -55,6 +55,7 @@
      <Compile Include="Assets\Code\Game Mechanics\DrawHealth.cs" />
      <Compile Include="Assets\Code\Game Mechanics\GameManager.cs" />
      <Compile Include="Assets\Code\Game Mechanics\GenericObject.cs" />
+     <Compile Include="Assets\Code\Game Mechanics\GradientBackground.cs" />
      <Compile Include="Assets\Code\Game Mechanics\HealthBar.cs" />
      <Compile Include="Assets\Code\Game Mechanics\HoverBotAi.cs" />
      <Compile Include="Assets\Code\Game Mechanics\PickUp.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Code\Game Mechanics\ThirdPersonCamera.cs" />
      <Compile Include="Assets\Code\Game Mechanics\ThirdPersonCameraK.cs" />
      <Compile Include="Assets\Code\Game Mechanics\ThirdPersonController.cs" />
+     <Compile Include="Assets\Code\Game Mechanics\WonScreen.cs" />
      <Compile Include="Assets\Code\MainScreen.cs" />
      <Compile Include="Assets\Code\MessengerSystem\AudioManagerMessages.cs" />
      <Compile Include="Assets\Code\MessengerSystem\GameMessages.cs" />

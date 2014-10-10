@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4DC9D03A-0107-F7A6-AE08-B5FC588ED031}</ProjectGuid>
+	<ProjectGuid>{D179DC98-CE75-9215-2F47-034B0916A624}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,44 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Code\ButtonMessages\Button.cs" />
-     <Compile Include="Assets\Code\ButtonMessages\ButtonMessages.cs" />
-     <Compile Include="Assets\Code\ButtonMessages\ExitButton.cs" />
-     <Compile Include="Assets\Code\ButtonMessages\LevelButton.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\AutoDestroyParticle.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\Bullet.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\DrawHealth.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\GameManager.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\GenericObject.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\GradientBackground.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\HealthBar.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\HoverBotAi.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\PickUp.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\Rocket.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\Shoot.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\ThirdPersonCamera.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\ThirdPersonCameraK.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\ThirdPersonController.cs" />
-     <Compile Include="Assets\Code\Game Mechanics\WonScreen.cs" />
-     <Compile Include="Assets\Code\MainScreen.cs" />
-     <Compile Include="Assets\Code\MessengerSystem\AudioManagerMessages.cs" />
-     <Compile Include="Assets\Code\MessengerSystem\GameMessages.cs" />
-     <Compile Include="Assets\Code\MessengerSystem\HandleScript.cs" />
-     <Compile Include="Assets\Code\SoundSystem\SoundManager.cs" />
-     <Compile Include="Assets\Code\SoundSystem\SoundsClipClass.cs" />
-     <Compile Include="Assets\Game.cs" />
+     <Compile Include="Assets\WinScreen.js" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
- <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Kamal/Documents/Unity Projects/RoboArena/trunk/SeniorProject/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{ED56C0F8-D166-5A15-4C15-7FED1D64B54D}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{ED56C0F8-D166-5A15-4C15-7FED1D64B54D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{3971F05A-E46D-DFDA-CB77-EB613E030EC9}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
