@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
 			Application.LoadLevel ("WinScene") ;
 				}
 		if (AIScore >= 10) {
-
+			Application.LoadLevel ("LoseScene") ;
 				}
 
 	}

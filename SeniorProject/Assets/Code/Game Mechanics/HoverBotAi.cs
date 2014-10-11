@@ -7,7 +7,7 @@ public class HoverBotAi : MonoBehaviour {
 	public Rigidbody bullet ;
 	Vector3 NoYRotationVec;
 	Vector3 Vec ;
-	State state ;
+	public State state ;
 
 	// Use this for initialization
 
@@ -72,7 +72,7 @@ public class HoverBotAi : MonoBehaviour {
 
 		Vec = transform.position + transform.forward * 4;
 
-		Vec.y -= 2;
+		Vec.y += 4;
 
 		Rigidbody bulletinstance = Instantiate (bullet, Vec, Quaternion.identity)as Rigidbody;
 

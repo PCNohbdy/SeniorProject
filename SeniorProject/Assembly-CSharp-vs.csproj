@@ -53,6 +53,7 @@
      <Compile Include="Assets\Code\Game Mechanics\AutoDestroyParticle.cs" />
      <Compile Include="Assets\Code\Game Mechanics\Bullet.cs" />
      <Compile Include="Assets\Code\Game Mechanics\DrawHealth.cs" />
+     <Compile Include="Assets\Code\Game Mechanics\FloatingHealthBar.cs" />
      <Compile Include="Assets\Code\Game Mechanics\GameManager.cs" />
      <Compile Include="Assets\Code\Game Mechanics\GenericObject.cs" />
      <Compile Include="Assets\Code\Game Mechanics\GradientBackground.cs" />
