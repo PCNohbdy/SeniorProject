@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Game : MonoBehaviour {
+public class Game : MonoBehaviour,
+    IHandle<LoadInMainScreen>
+{
 
 	// Use this for initialization
     SoundManager SM;
@@ -19,6 +21,11 @@ public class Game : MonoBehaviour {
         GameEventAggregator.GameMessenger.Subscribe(this);
         LoadInSounds();
         GetMainScreen();
+    }
+
+    void OnDestroy()
+    {
+        GameEventAggregator.GameMessenger.Unsubscribe(this);
     }
 
     void LoadInSounds()
@@ -43,5 +50,10 @@ public class Game : MonoBehaviour {
             m_MainScreen.gameObject.transform.parent = this.gameObject.transform;
         }
         return m_MainScreen;
+    }
+
+    public void Handle(LoadInMainScreen message)
+    {
+        GetMainScreen();
     }
 }

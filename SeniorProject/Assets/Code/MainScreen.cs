@@ -26,11 +26,14 @@ public class MainScreen : MonoBehaviour,
 
 	}
 
+    void OnDestroy()
+    {
+        EventAggregatorManager.Publish(new StopSoundLoopMessage("MainMenuMusic"));
+    }
+
     public void Handle(LoadLevelButtonMessage message)
     {
         Application.LoadLevelAdditive(message.LevelToLoad);
-        EventAggregatorManager.Publish(new StopSoundLoopMessage("MainMenuMusic"));
-        EventAggregatorManager.Publish(new PlaySoundMessage("LevelMusic", true));
         Destroy(this.gameObject);
     }
 

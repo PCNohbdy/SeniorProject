@@ -12,6 +12,13 @@ public class LoadLevelMessage
 
 }
 
+public class LoadInMainScreen
+{
+    public LoadInMainScreen()
+    {
+
+    }
+}
 
 public class DestroyLevelMessage
 {

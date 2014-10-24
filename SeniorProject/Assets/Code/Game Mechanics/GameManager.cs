@@ -53,12 +53,14 @@ public class GameManager : MonoBehaviour {
 
 
 
-		if (PlayerScore >= 10) {
-			Application.LoadLevel ("WinScene") ;
-				}
-		if (AIScore >= 10) {
-			Application.LoadLevel ("LoseScene") ;
-				}
+		if (PlayerScore >= 10) 
+        {
+            GameEventAggregator.GameMessenger.Publish(new LoadLevelMessage("WinScene"));
+		}
+		if (AIScore >= 10)
+        {
+            GameEventAggregator.GameMessenger.Publish(new LoadLevelMessage("LoseScene"));
+		}
 
 	}
 

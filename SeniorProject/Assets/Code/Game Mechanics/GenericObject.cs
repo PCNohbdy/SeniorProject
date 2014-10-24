@@ -51,6 +51,10 @@ public class GenericObject : MonoBehaviour {
 					
 					
 				}
+                if (Input.GetKey(KeyCode.Escape))
+                {
+                    GameEventAggregator.GameMessenger.Publish(new LoadInMainScreen());
+                }
 				}
 
 	}
@@ -61,7 +65,7 @@ public class GenericObject : MonoBehaviour {
 
 			//GUI.Box (DeathBox,dBox) ;
 			GUI.Label (YouDeadText, "YOU HAVE BEEN DISMANTLED...") ;
-			GUI.Label (ClickToContText, "click space to respawn") ;
+			GUI.Label (ClickToContText, "click space to respawn or click esc to go to MainMenu") ;
 
 				}
 	}
