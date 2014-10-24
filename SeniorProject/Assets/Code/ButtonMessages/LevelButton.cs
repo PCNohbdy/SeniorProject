@@ -10,7 +10,6 @@ public class LevelButton : Button
     public override void Start()
     {
         base.Start();
-        audio.Stop();
         m_ReleaseMessage = new LoadLevelButtonMessage(){LevelToLoad = Level};
 
         GameEventAggregator.GameMessenger.Subscribe(this);
